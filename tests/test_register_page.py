@@ -43,6 +43,5 @@ def test_register_page_functionality_with_valid_inputs(register_page_setup, name
     assert register_page_setup.current_url == "https://qameetup.ccbp.tech/"
     assert f"Hello {name}" in register_page_setup.page_source
     
-    # Handle the Fashion and Beauty vs Fashion and Learning exception
     expected_text = "Fashion and Learning" if "Beauty" in option_text else option_text
     assert f"Welcome to {expected_text}" in register_page_setup.page_source

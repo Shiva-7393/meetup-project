@@ -18,14 +18,14 @@ def setup():
 
 @pytest.fixture()
 def register_page_setup(setup):
-    """Fixture that navigates to the register page and returns the driver"""
+    
     driver = setup
     
     from pages.welcome_page import WelcomePage
     wp = WelcomePage(driver)
     wp.register()
     
-    # Wait for register page to load
+    
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//img[@alt='website logo']"))
     )
