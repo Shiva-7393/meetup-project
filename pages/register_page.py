@@ -82,6 +82,6 @@ class RegisterPage:
         return element.text
 
     def register_image(self):
-        """Find register image element"""
+        
         return self.driver.find_element(By.XPATH, "//img[@alt='website register']")
 
